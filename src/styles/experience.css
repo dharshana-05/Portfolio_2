@@ -1,0 +1,92 @@
+.experience-timeline{
+    max-width:900px;
+    margin:0 auto;
+    position:relative;
+}
+
+.experience-timeline::before{
+    content:"";
+    position:absolute;
+    left:20px;
+    top:0;
+    width:3px;
+    height:100%;
+
+    background:linear-gradient(
+        to bottom,
+        #FF9408,
+        #CA3F16
+    );
+}
+
+.experience-item{
+    position:relative;
+    margin-bottom:50px;
+    padding-left:70px;
+}
+
+.experience-item::before{
+    content:"";
+
+    position:absolute;
+
+    left:10px;
+    top:10px;
+
+    width:20px;
+    height:20px;
+
+    border-radius:50%;
+
+    background:#FF9408;
+
+    box-shadow:
+    0 0 15px rgba(255,148,8,.5);
+}
+
+.experience-content{
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,148,8,.15);
+
+    border-radius:18px;
+
+    padding:25px 30px;
+
+    transition:.3s;
+}
+
+.experience-content:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#FF9408;
+}
+
+.company{
+    color:#FF9408;
+    font-weight:600;
+    margin:10px 0;
+}
+
+.duration{
+    color:#CA3F16;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+@media(max-width:768px){
+
+    .experience-item{
+        padding-left:50px;
+    }
+
+    .experience-timeline::before{
+        left:12px;
+    }
+
+    .experience-item::before{
+        left:3px;
+    }
+}

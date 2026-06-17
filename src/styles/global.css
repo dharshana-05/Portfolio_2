@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root{
+--bg:#100C08;
+--primary:#FF9408;
+--secondary:#CA3F16;
+--accent:#95122C;
+
+--text:#F3F4F5;
+--text-muted:#B8B8B8;
+
+--border:rgba(255,148,8,0.15);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Space Grotesk',sans-serif;
+background:#100C08;
+color:var(--text);
+overflow-x:hidden;
+
+background-image:
+radial-gradient(
+circle at 10% 20%,
+rgba(255,148,8,0.08),
+transparent 30%
+),
+radial-gradient(
+circle at 90% 80%,
+rgba(149,18,44,0.12),
+transparent 30%
+);
+}
+
+body.dark{
+background:#100C08;
+color:#F3F4F5;
+}
+
+body.light{
+background:#F8F9FA;
+color:#111827;
+}
+
+body.light p{
+color:#4B5563;
+}
+
+body.light .card{
+background:white;
+border:1px solid #E5E7EB;
+}
+
+body.light .skill-pill{
+background:#FFF7ED;
+border:1px solid #FDBA74;
+color:#111827;
+}
+
+body.light .navbar{
+background:rgba(255,255,255,0.95);
+}
+
+body.light .navbar a{
+color:#111827;
+}
+
+body.light .navbar h2{
+color:#CA3F16;
+}
+
+body.light h2{
+color:#CA3F16;
+}
+
+body.light section{
+background:transparent;
+}
+body.light h3{
+  color:#111827;
+}
+
+body.light .education-content h3,
+body.light .experience-content h3,
+body.light .project-info h3{
+  color:#111827;
+}
+
+body.light .degree,
+body.light .company{
+  color:#CA3F16;
+}
+
+body.light .year{
+  color:#9A3412;
+}
+
+body.light .cgpa,
+body.light p{
+  color:#4B5563;
+}
+
+/* SECTION SPACING */
+
+section{
+max-width:1200px;
+margin:0 auto;
+padding:50px 40px;
+}
+
+.container{
+width:100%;
+}
+
+/* HEADINGS */
+
+h1{
+font-size:5rem;
+line-height:1;
+font-weight:700;
+}
+
+h2{
+text-align:center;
+
+font-size:2.8rem;
+
+font-weight:700;
+
+color:var(--primary);
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
+margin-bottom:40px;
+
+position:relative;
+}
+
+h2::after{
+content:"";
+
+display:block;
+
+width:90px;
+height:4px;
+
+margin:12px auto 0;
+
+border-radius:10px;
+
+background:var(--secondary);
+}
+
+h3{
+font-size:1.5rem;
+margin-bottom:12px;
+}
+
+p{
+color:var(--text-muted);
+line-height:1.8;
+}
+
+/* LINKS */
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* LISTS */
+
+ul{
+list-style:none;
+}
+
+/* BUTTONS */
+
+button,
+.btn{
+border:none;
+
+cursor:pointer;
+
+padding:14px 28px;
+
+border-radius:12px;
+
+font-weight:600;
+
+transition:.3s;
+
+background:
+linear-gradient(
+135deg,
+var(--primary),
+var(--secondary)
+);
+
+color:white;
+}
+
+button:hover,
+.btn:hover{
+transform:translateY(-3px);
+
+box-shadow:
+0 0 20px rgba(255,148,8,.35);
+}
+
+/* GENERIC CARD */
+
+.card{
+background:rgba(255,255,255,0.03);
+
+border:1px solid var(--border);
+
+border-radius:20px;
+
+padding:25px;
+
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+border-color:var(--primary);
+}
+
+/* SKILLS */
+
+.skills-container{
+max-width:900px;
+margin:auto;
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.skill-pill{
+padding:12px 22px;
+
+border-radius:999px;
+
+border:1px solid var(--border);
+
+background:
+rgba(255,148,8,.05);
+
+transition:.3s;
+
+cursor:pointer;
+}
+
+.skill-pill:hover{
+background:var(--primary);
+color:black;
+transform:translateY(-3px);
+}
+
+/* CONTACT */
+
+.contact-form{
+max-width:700px;
+margin:auto;
+
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+width:100%;
+
+padding:16px;
+
+border-radius:12px;
+
+border:1px solid var(--border);
+
+background:
+rgba(255,255,255,.03);
+
+color:white;
+
+outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+border-color:var(--primary);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#100C08;
+}
+
+::-webkit-scrollbar-thumb{
+background:var(--primary);
+border-radius:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+section{
+padding:50px 20px;
+}
+
+h1{
+font-size:3rem;
+}
+
+h2{
+font-size:2rem;
+margin-bottom:30px;
+}
+
+h3{
+font-size:1.2rem;
+}
+}
