@@ -14,16 +14,25 @@ function Contact() {
           className="contact-form"
         >
 
+          {/* Email Subject */}
           <input
             type="hidden"
             name="_subject"
             value="New Portfolio Contact Message"
           />
 
+          {/* Disable Captcha */}
           <input
             type="hidden"
             name="_captcha"
             value="false"
+          />
+
+          {/* Redirect Back To Portfolio */}
+          <input
+            type="hidden"
+            name="_next"
+            value="https://portfolio-2-liard-nine.vercel.app/"
           />
 
           <input
